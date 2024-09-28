@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:fashion_mart/consts/consts.dart';
+import 'package:fashion_mart/views/SplashScreen/splashScreen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   runApp(const FashionMart());
@@ -9,10 +11,17 @@ class FashionMart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(child: Text('Starting Point')),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: appname,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.transparent,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+        ),
+        fontFamily: regular,
       ),
+      home: const Splashscreen(),
     );
   }
 }
