@@ -10,7 +10,9 @@ class FashionMart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(),
+      home: Scaffold(
+        body: Center(child: Text('Starting point')),
+      ),
     );
   }
 }
