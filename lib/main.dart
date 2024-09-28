@@ -11,7 +11,7 @@ class FashionMart extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(child: Text('Project starting')),
+        body: Center(child: Text('Starting Point')),
       ),
     );
   }
