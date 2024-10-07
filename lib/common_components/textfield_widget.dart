@@ -1,15 +1,16 @@
 import 'package:fashion_mart/consts/consts.dart';
 
-customTextFieldWidget() {
+customTextFieldWidget({String? title, String? hint, controller}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      email.text.color(redColor).fontFamily(semibold).size(16).make(),
+      title!.text.color(redColor).fontFamily(semibold).size(16).make(),
       5.heightBox,
       TextFormField(
-        decoration: const InputDecoration(
-          hintText: 'Email',
-          hintStyle: TextStyle(
+        // controller: controller,
+        decoration: InputDecoration(
+          hintText: hint!,
+          hintStyle: const TextStyle(
             fontFamily: semibold,
             color: textfieldGrey,
           ),
@@ -17,11 +18,12 @@ customTextFieldWidget() {
           fillColor: lightGrey,
           filled: true,
           border: InputBorder.none,
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: redColor),
           ),
         ),
-      )
+      ),
+      5.heightBox
     ],
   );
 }
